@@ -28,7 +28,7 @@
 <meta property="og:description" content="前言一天我在学习JavaSE的时候，学到了PriorityQueue优先级队列这个东西，讲师说道  它这个将元素入队后会自动排序，出队的时候就会按大小排序。  然后我就试了一下，还真是，但是用迭代器打印其中的元素呢，发现事情并不简单… 问题Queue&lt;Integer&gt; queue &#x3D; new PriorityQueue&lt;&gt;(); queue.offer(10); queue.offer">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-10-17T09:20:41.000Z">
-<meta property="article:modified_time" content="2023-10-17T09:39:26.882Z">
+<meta property="article:modified_time" content="2023-10-17T11:19:02.513Z">
 <meta property="article:author" content="Mxgxxx">
 <meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
@@ -310,7 +310,7 @@ queue<span class="token punctuation">.</span><span class="token function">offer<
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// [10, 1, 5, 2]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>但是实际的顺序是</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// [1, 2, 5, 10]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>我一直对这个很迷惑，直到我在一个学算法的网站上学到了一个交堆的东西</p>
+<p>我一直对这个很迷惑，直到我在一个学算法的网站上学到了一个叫堆的东西</p>
 <blockquote>
 <p>8.1 堆 <a target="_blank" rel="noopener" href="https://www.hello-algo.com/chapter_heap/heap/#813">https://www.hello-algo.com/chapter_heap&#x2F;heap&#x2F;#813</a></p>
 </blockquote>
