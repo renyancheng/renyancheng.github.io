@@ -182,13 +182,13 @@ p.spoiler {
     <div class="widget">
       <h3 class="widget-title">分类</h3>
       <div class="category-box">
-            <a class="category-link" href="/categories/%E9%A1%B9%E7%9B%AE/">
-                项目
+            <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/">
+                学习分享
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/">
-                学习分享
+            <a class="category-link" href="/categories/%E9%A1%B9%E7%9B%AE/">
+                项目
                 <div class="category-count">1</div>
             </a>
         </div>
@@ -288,7 +288,7 @@ p.spoiler {
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            585 词 
+            636 词 
           </div>
         </div>
         
@@ -303,18 +303,27 @@ p.spoiler {
 它这个将元素入队后会自动排序，出队的时候就会按大小排序。
 
 然后我就试了一下，还真是，但是用迭代器打印其中的元素呢，发现事情并不简单…
-问题123456Queue&lt;Integer&gt; queue = new PriorityQueue&lt;&gt;();queue.offer(10);queue.offer(1);queue.offer(5);queue.offer(2);System.out.println(queue);
+问题Queue&lt;Integer> queue = new PriorityQueue&lt;>();
+queue.offer(10);
+queue.offer(1);
+queue.offer(5);
+queue.offer(2);
+System.out.println(queue);
 可以猜一下，结果是什么，正常按理来说应该顺序是：
-1// [10, 1, 5, 2]
+// [10, 1, 5, 2]
 但是实际的顺序是
-1// [1, 2, 5, 10]
+// [1, 2, 5, 10]
 我一直对这个很迷惑，直到我在一个学算法的网站上学到了一个交堆的东西
 
 8.1 堆 https://www.hello-algo.com/chapter_heap&#x2F;heap&#x2F;#813
 
-分析12345// 10入队       10    /      \
+分析&#x2F;&#x2F; 10入队
 
-1234// 1入队       ...  
+       10
+    &#x2F;      \
+
+
+&#x2F;&#x2F;...  
           </div>
         
       </div>
@@ -370,7 +379,7 @@ p.spoiler {
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            609 词 
+            608 词 
           </div>
         </div>
         
