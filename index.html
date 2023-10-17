@@ -300,8 +300,9 @@ p.spoiler {
           <div class="truncate-text">
             前言一天我在学习JavaSE的时候，学到了PriorityQueue优先级队列这个东西，讲师说道
 
-它这个将元素入队后会自动排序，出队的时候就会按大小排序。然后我就试了一下，还真是，但是用迭代器打印其中的元素呢，发现事情并不简单…
+它这个将元素入队后会自动排序，出队的时候就会按大小排序。
 
+然后我就试了一下，还真是，但是用迭代器打印其中的元素呢，发现事情并不简单…
 问题123456Queue&lt;Integer&gt; queue = new PriorityQueue&lt;&gt;();queue.offer(10);queue.offer(1);queue.offer(5);queue.offer(2);System.out.println(queue);
 可以猜一下，结果是什么，正常按理来说应该顺序是：
 1// [10, 1, 5, 2]
@@ -313,7 +314,7 @@ p.spoiler {
 
 分析12345// 10入队       10    /      \
 
-1234// 1入队       1...  
+1234// 1入队       ...  
           </div>
         
       </div>
