@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 
-<html theme="dark" showBanner="true" hasBanner="true" > 
+<html theme="dark" showBanner="true" hasBanner="false" > 
 <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
 <link href="/fontawesome/css/brands.css" rel="stylesheet">
 <link href="/fontawesome/css/solid.css" rel="stylesheet">
@@ -14,7 +14,7 @@
   
 
   
-  <title>Mxgxxx&#39;s Blog</title>
+  <title>标签: 链表 | Mxgxxx&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
@@ -22,7 +22,7 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="Mxgxxx&#39;s Blog">
-<meta property="og:url" content="https://renyancheng.github.io/index.html">
+<meta property="og:url" content="https://renyancheng.github.io/tags/%E9%93%BE%E8%A1%A8/index.html">
 <meta property="og:site_name" content="Mxgxxx&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Mxgxxx">
@@ -78,16 +78,9 @@ p.spoiler {
 
 <body>
   
-  
-    
-<div id="banner" class=" is_home ">
-  <img src="https://picsum.photos/1980/1080" itemprop="image">
-  <div id="banner-dim"></div>
-</div>
- 
    
   <div id="main-grid" class="shadow   ">
-    <div id="nav" class=" is_home "  >
+    <div id="nav" class=""  >
       <navbar id="navbar">
   <nav id="title-nav">
     <a href="/">
@@ -266,241 +259,46 @@ p.spoiler {
 </sidebar>
     </div>
     <div id="content-body">
-      
-   
+       
 
-<article id="post-双指针技巧在数组与链表之中的应用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2023/10/31/%E5%8F%8C%E6%8C%87%E9%92%88%E6%8A%80%E5%B7%A7%E5%9C%A8%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8%E4%B9%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/">双指针技巧在数组与链表之中的应用</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2023-10-31T09:43:46.000Z" itemprop="datePublished">2023-10-31</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            4.9k 词 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag">双指针</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            前言最近看了labuladong的算法笔记，感觉对数据结构有有了一写新的理解，这里把链接放出来了
-
-labuladong的算法笔记
-
-这篇文章旨在回顾我在看他笔记时所产生的一些想法，进行复盘，以加深我自己的记忆。
-双指针介绍首先， 双指针分为左右指针和快慢指针，而左右指针又分为左右向中间逼近和在中间向两侧逼近，那么接下来我们分别对这些指针开始介绍。
-左右指针左右指针通常应用在数组中，为什么链表中应用少，应为链表是单向的话，是无法访问其前面节点的，需要靠额外的空间储存，即使是双向链表，我们也不知道其链表的长度是多少，必须进行一次遍历才能知道，所以在链表中不推荐左右指针。
-两侧向中间移动1.二分查找int binarySearch(int[] nums, int target)&#123;
-    int left = 0, right = nums.length -1;
-    while(left &lt; right) &#123;
-        int mid = (left + right) /2;
-        if(target > nums[mid]) &#123...  
-          </div>
-        
-      </div>
-
-         
+<div class="archive-main-card">
+    <div class="archive-top">
+      <div class="main-title-bar">
+        <div class="main-title-dot"></div>
+        <h1 class="article-title">归档</h1>
+      </div>    
     </div>
     
-     
-    <a class="right-panel  non-pic  "
+    
       
-      href="/2023/10/31/%E5%8F%8C%E6%8C%87%E9%92%88%E6%8A%80%E5%B7%A7%E5%9C%A8%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8%E4%B9%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
- 
-
-   
-
-<article id="post-对Java中PriorityQueue迭代器打印顺序的深度研究" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
+      
         
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2023/10/17/%E5%AF%B9Java%E4%B8%ADPriorityQueue%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%89%93%E5%8D%B0%E9%A1%BA%E5%BA%8F%E7%9A%84%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6/">对Java中PriorityQueue迭代器打印顺序的深度研究</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2023-10-17T09:20:41.000Z" itemprop="datePublished">2023-10-17</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/">学习分享</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            636 词 
-          </div>
+        <div class="year-line">
+            <div class="year-num">2023</div>
+            <div class="dot-wrapper">
+                <div class="dot"></div>
+            </div>
+            <div class="article-count">1 篇文章</div>
         </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            前言一天我在学习JavaSE的时候，学到了PriorityQueue优先级队列这个东西，讲师说道
-
-它这个将元素入队后会自动排序，出队的时候就会按大小排序。
-
-然后我就试了一下，还真是，但是用迭代器打印其中的元素呢，发现事情并不简单…
-问题Queue&lt;Integer> queue = new PriorityQueue&lt;>();
-queue.offer(10);
-queue.offer(1);
-queue.offer(5);
-queue.offer(2);
-System.out.println(queue);
-可以猜一下，结果是什么，正常按理来说应该顺序是：
-// [10, 1, 5, 2]
-但是实际的顺序是
-// [1, 2, 5, 10]
-我一直对这个很迷惑，直到我在一个学算法的网站上学到了一个叫堆的东西
-
-8.1 堆 https://www.hello-algo.com/chapter_heap&#x2F;heap&#x2F;#813
-
-分析&#x2F;&#x2F; 10入队
-
-       10
-    &#x2F;      \
-
-
-&#x2F;&#x2F;...  
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
       
-      href="/2023/10/17/%E5%AF%B9Java%E4%B8%ADPriorityQueue%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%89%93%E5%8D%B0%E9%A1%BA%E5%BA%8F%E7%9A%84%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
- 
-
-   
-
-<article id="post-沐朽阁API管理系统，快速管理的API接口" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2022/02/04/%E6%B2%90%E6%9C%BD%E9%98%81API%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BF%AB%E9%80%9F%E7%AE%A1%E7%90%86%E7%9A%84API%E6%8E%A5%E5%8F%A3/">沐朽阁API管理系统-快速管理你的API接口</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2022-02-04T14:58:15.000Z" itemprop="datePublished">2022-02-04</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            608 词 
-          </div>
+      <a class="archive-article-link" href="/2023/10/31/%E5%8F%8C%E6%8C%87%E9%92%88%E6%8A%80%E5%B7%A7%E5%9C%A8%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8%E4%B9%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/" title="双指针技巧在数组与链表之中的应用">
+        <div class="date">10-31</div>
+        <div class="line">
+            <div class="dot"></div>
         </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/API%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" rel="tag">API管理系统</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE/" rel="tag">项目</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          在我没有一套完整的管理程序前，我在每次添加API时都要自己打开html文件去自己编辑才可以，而且又麻烦，就很烦，于是就有了这么一个系统。
-        
-      </div>
-
-         
-    </div>
+        <div class="title">
+            <div class="title-inner">
+                
+                    双指针技巧在数组与链表之中的应用
+                
+            </div>
+        </div>
+        <div class="tags">
+            #双指针 #数组 #链表
+        </div>
+      </a>
     
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2022/02/04/%E6%B2%90%E6%9C%BD%E9%98%81API%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BF%AB%E9%80%9F%E7%AE%A1%E7%90%86%E7%9A%84API%E6%8E%A5%E5%8F%A3/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
   </div>
-  
-</article>
-
- 
-
-
-
     </div>
     <div id="footer-wrapper">
       <footer id="footer">
