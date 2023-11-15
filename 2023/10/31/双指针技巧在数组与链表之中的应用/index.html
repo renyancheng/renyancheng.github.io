@@ -28,7 +28,7 @@
 <meta property="og:description" content="前言最近看了labuladong的算法笔记，感觉对数据结构有有了一写新的理解，这里把链接放出来了  labuladong的算法笔记  这篇文章旨在回顾我在看他笔记时所产生的一些想法，进行复盘，以加深我自己的记忆。 双指针介绍首先， 双指针分为左右指针和快慢指针，而左右指针又分为左右向中间逼近和在中间向两侧逼近，那么接下来我们分别对这些指针开始介绍。 左右指针左右指针通常应用在数组中，为什么链表中应">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-10-31T09:43:46.000Z">
-<meta property="article:modified_time" content="2023-10-31T15:11:51.466Z">
+<meta property="article:modified_time" content="2023-11-13T11:56:42.993Z">
 <meta property="article:author" content="Mxgxxx">
 <meta property="article:tag" content="双指针">
 <meta property="article:tag" content="数组">
@@ -183,7 +183,7 @@ p.spoiler {
       <div class="category-box">
             <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">
                 数据结构与算法
-                <div class="category-count">2</div>
+                <div class="category-count">3</div>
             </a>
         
             <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/">
@@ -205,7 +205,7 @@ p.spoiler {
   <div class="widget-wrap">
     <div class="widget">
       <h3 class="widget-title">标签</h3>
-      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/API%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" rel="tag">API管理系统</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%85%A8%E6%8E%92%E5%88%97/" rel="tag">全排列</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag">双指针</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%9B%9E%E6%BA%AF/" rel="tag">回溯</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE/" rel="tag">项目</a></li></ul>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/API%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" rel="tag">API管理系统</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%85%A8%E6%8E%92%E5%88%97/" rel="tag">全排列</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/" rel="tag">前缀和</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag">双指针</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%9B%9E%E6%BA%AF/" rel="tag">回溯</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%B7%AE%E5%88%86/" rel="tag">差分</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE/" rel="tag">项目</a></li></ul>
     </div>
   </div>
 
@@ -219,7 +219,7 @@ p.spoiler {
       
         <a class="archive-link" href="/archives/2023/11 ">
           十一月 2023 
-          <div class="archive-count">1 </div>
+          <div class="archive-count">2 </div>
         </a>
       
         <a class="archive-link" href="/archives/2023/10 ">
@@ -242,6 +242,12 @@ p.spoiler {
     <div class="widget">
       <h3 class="widget-title">最新文章</h3>
       <ul>
+        
+          <a class="recent-link" href="/2023/11/13/%E5%89%8D%E7%BC%80%E5%92%8C%E6%95%B0%E7%BB%84%E4%B8%8E%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E5%BA%94%E7%94%A8/" title="前缀和数组与差分数组的实现与应用" >
+            <div class="recent-link-text">
+              前缀和数组与差分数组的实现与应用
+            </div>
+          </a>
         
           <a class="recent-link" href="/2023/11/07/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E8%A7%A3%E5%86%B3%E6%8E%92%E5%88%97-%E7%BB%84%E5%90%88-%E5%AD%90%E9%9B%86%E9%97%AE%E9%A2%98/" title="回溯算法解决排列/组合/子集问题" >
             <div class="recent-link-text">
@@ -342,7 +348,7 @@ p.spoiler {
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="2-两数之和"><a href="#2-两数之和" class="headerlink" title="2.两数之和"></a>2.两数之和</h4><blockquote>
-<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/">【leetcode 167：两树之和】</a></p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/">【leetcode 167：两数之和】</a></p>
 </blockquote>
 <p>对于这道题，使用左右指针非常合适，首先声明左右指针索引位置，分别为<code>0</code>和<code>nums.length-1</code>，然后开一个while循环，只要两个指针不相遇，就一直执行while中的代码，循环通过左右指针位置，拿到指针位置在数组中的值，并且求和赋给<code>sum</code>，对sum进行判断。</p>
 <ul>
