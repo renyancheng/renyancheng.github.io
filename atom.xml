@@ -3,11 +3,11 @@
   <title>Mxgxxx&#39;s Blog</title>
   
   
-  <link href="https://renyancheng.github.io/atom.xml" rel="self"/>
+  <link href="https://mxgxxx.gitee.io/atom.xml" rel="self"/>
   
-  <link href="https://renyancheng.github.io/"/>
+  <link href="https://mxgxxx.gitee.io/"/>
   <updated>2023-11-15T14:57:22.073Z</updated>
-  <id>https://renyancheng.github.io/</id>
+  <id>https://mxgxxx.gitee.io/</id>
   
   <author>
     <name>Mxgxxx</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>前缀和数组与差分数组的实现与应用</title>
-    <link href="https://renyancheng.github.io/2023/11/13/%E5%89%8D%E7%BC%80%E5%92%8C%E6%95%B0%E7%BB%84%E4%B8%8E%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E5%BA%94%E7%94%A8/"/>
-    <id>https://renyancheng.github.io/2023/11/13/%E5%89%8D%E7%BC%80%E5%92%8C%E6%95%B0%E7%BB%84%E4%B8%8E%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E5%BA%94%E7%94%A8/</id>
+    <link href="https://mxgxxx.gitee.io/2023/11/13/%E5%89%8D%E7%BC%80%E5%92%8C%E6%95%B0%E7%BB%84%E4%B8%8E%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E5%BA%94%E7%94%A8/"/>
+    <id>https://mxgxxx.gitee.io/2023/11/13/%E5%89%8D%E7%BC%80%E5%92%8C%E6%95%B0%E7%BB%84%E4%B8%8E%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E5%BA%94%E7%94%A8/</id>
     <published>2023-11-13T11:48:58.000Z</published>
     <updated>2023-11-15T14:57:22.073Z</updated>
     
@@ -34,21 +34,21 @@
     
     
     
-    <category term="数据结构与算法" scheme="https://renyancheng.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    <category term="数据结构与算法" scheme="https://mxgxxx.gitee.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="数组" scheme="https://renyancheng.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    <category term="数组" scheme="https://mxgxxx.gitee.io/tags/%E6%95%B0%E7%BB%84/"/>
     
-    <category term="前缀和" scheme="https://renyancheng.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/"/>
+    <category term="前缀和" scheme="https://mxgxxx.gitee.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/"/>
     
-    <category term="差分" scheme="https://renyancheng.github.io/tags/%E5%B7%AE%E5%88%86/"/>
+    <category term="差分" scheme="https://mxgxxx.gitee.io/tags/%E5%B7%AE%E5%88%86/"/>
     
   </entry>
   
   <entry>
     <title>回溯算法解决排列/组合/子集问题</title>
-    <link href="https://renyancheng.github.io/2023/11/07/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E8%A7%A3%E5%86%B3%E6%8E%92%E5%88%97-%E7%BB%84%E5%90%88-%E5%AD%90%E9%9B%86%E9%97%AE%E9%A2%98/"/>
-    <id>https://renyancheng.github.io/2023/11/07/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E8%A7%A3%E5%86%B3%E6%8E%92%E5%88%97-%E7%BB%84%E5%90%88-%E5%AD%90%E9%9B%86%E9%97%AE%E9%A2%98/</id>
+    <link href="https://mxgxxx.gitee.io/2023/11/07/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E8%A7%A3%E5%86%B3%E6%8E%92%E5%88%97-%E7%BB%84%E5%90%88-%E5%AD%90%E9%9B%86%E9%97%AE%E9%A2%98/"/>
+    <id>https://mxgxxx.gitee.io/2023/11/07/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E8%A7%A3%E5%86%B3%E6%8E%92%E5%88%97-%E7%BB%84%E5%90%88-%E5%AD%90%E9%9B%86%E9%97%AE%E9%A2%98/</id>
     <published>2023-11-07T11:15:19.000Z</published>
     <updated>2023-11-07T12:40:53.174Z</updated>
     
@@ -62,19 +62,19 @@
     
     
     
-    <category term="数据结构与算法" scheme="https://renyancheng.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    <category term="数据结构与算法" scheme="https://mxgxxx.gitee.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="回溯" scheme="https://renyancheng.github.io/tags/%E5%9B%9E%E6%BA%AF/"/>
+    <category term="回溯" scheme="https://mxgxxx.gitee.io/tags/%E5%9B%9E%E6%BA%AF/"/>
     
-    <category term="全排列" scheme="https://renyancheng.github.io/tags/%E5%85%A8%E6%8E%92%E5%88%97/"/>
+    <category term="全排列" scheme="https://mxgxxx.gitee.io/tags/%E5%85%A8%E6%8E%92%E5%88%97/"/>
     
   </entry>
   
   <entry>
     <title>双指针技巧在数组与链表之中的应用</title>
-    <link href="https://renyancheng.github.io/2023/10/31/%E5%8F%8C%E6%8C%87%E9%92%88%E6%8A%80%E5%B7%A7%E5%9C%A8%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8%E4%B9%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/"/>
-    <id>https://renyancheng.github.io/2023/10/31/%E5%8F%8C%E6%8C%87%E9%92%88%E6%8A%80%E5%B7%A7%E5%9C%A8%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8%E4%B9%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</id>
+    <link href="https://mxgxxx.gitee.io/2023/10/31/%E5%8F%8C%E6%8C%87%E9%92%88%E6%8A%80%E5%B7%A7%E5%9C%A8%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8%E4%B9%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/"/>
+    <id>https://mxgxxx.gitee.io/2023/10/31/%E5%8F%8C%E6%8C%87%E9%92%88%E6%8A%80%E5%B7%A7%E5%9C%A8%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8%E4%B9%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</id>
     <published>2023-10-31T09:43:46.000Z</published>
     <updated>2023-11-13T11:56:42.993Z</updated>
     
@@ -90,21 +90,21 @@
     
     
     
-    <category term="数据结构与算法" scheme="https://renyancheng.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    <category term="数据结构与算法" scheme="https://mxgxxx.gitee.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="双指针" scheme="https://renyancheng.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    <category term="数组" scheme="https://mxgxxx.gitee.io/tags/%E6%95%B0%E7%BB%84/"/>
     
-    <category term="数组" scheme="https://renyancheng.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    <category term="双指针" scheme="https://mxgxxx.gitee.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
-    <category term="链表" scheme="https://renyancheng.github.io/tags/%E9%93%BE%E8%A1%A8/"/>
+    <category term="链表" scheme="https://mxgxxx.gitee.io/tags/%E9%93%BE%E8%A1%A8/"/>
     
   </entry>
   
   <entry>
     <title>对Java中PriorityQueue迭代器打印顺序的深度研究</title>
-    <link href="https://renyancheng.github.io/2023/10/17/%E5%AF%B9Java%E4%B8%ADPriorityQueue%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%89%93%E5%8D%B0%E9%A1%BA%E5%BA%8F%E7%9A%84%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6/"/>
-    <id>https://renyancheng.github.io/2023/10/17/%E5%AF%B9Java%E4%B8%ADPriorityQueue%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%89%93%E5%8D%B0%E9%A1%BA%E5%BA%8F%E7%9A%84%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6/</id>
+    <link href="https://mxgxxx.gitee.io/2023/10/17/%E5%AF%B9Java%E4%B8%ADPriorityQueue%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%89%93%E5%8D%B0%E9%A1%BA%E5%BA%8F%E7%9A%84%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6/"/>
+    <id>https://mxgxxx.gitee.io/2023/10/17/%E5%AF%B9Java%E4%B8%ADPriorityQueue%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%89%93%E5%8D%B0%E9%A1%BA%E5%BA%8F%E7%9A%84%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6/</id>
     <published>2023-10-17T09:20:41.000Z</published>
     <updated>2023-10-31T09:45:17.258Z</updated>
     
@@ -120,33 +120,33 @@
     
     
     
-    <category term="学习分享" scheme="https://renyancheng.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/"/>
+    <category term="学习分享" scheme="https://mxgxxx.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/"/>
     
     
-    <category term="数据结构与算法" scheme="https://renyancheng.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    <category term="数据结构与算法" scheme="https://mxgxxx.gitee.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>沐朽阁API管理系统-快速管理你的API接口</title>
-    <link href="https://renyancheng.github.io/2022/02/04/%E6%B2%90%E6%9C%BD%E9%98%81API%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BF%AB%E9%80%9F%E7%AE%A1%E7%90%86%E7%9A%84API%E6%8E%A5%E5%8F%A3/"/>
-    <id>https://renyancheng.github.io/2022/02/04/%E6%B2%90%E6%9C%BD%E9%98%81API%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BF%AB%E9%80%9F%E7%AE%A1%E7%90%86%E7%9A%84API%E6%8E%A5%E5%8F%A3/</id>
+    <link href="https://mxgxxx.gitee.io/2022/02/04/%E6%B2%90%E6%9C%BD%E9%98%81API%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BF%AB%E9%80%9F%E7%AE%A1%E7%90%86%E7%9A%84API%E6%8E%A5%E5%8F%A3/"/>
+    <id>https://mxgxxx.gitee.io/2022/02/04/%E6%B2%90%E6%9C%BD%E9%98%81API%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BF%AB%E9%80%9F%E7%AE%A1%E7%90%86%E7%9A%84API%E6%8E%A5%E5%8F%A3/</id>
     <published>2022-02-04T14:58:15.000Z</published>
     <updated>2023-10-17T09:07:15.196Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="沐朽阁API管理系统"><a href="#沐朽阁API管理系统" class="headerlink" title="沐朽阁API管理系统"></a>沐朽阁API管理系统</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在我没有一套完整的管理程序前，我在每次添加API时都要自己打开html文件去自己编辑才可以，而且又麻烦，就很烦，于是就有了这么一个系统。<br>这个系统从2020年9月开发一直到现在，也是经历了挺长时间了，也感谢那几个一直支持我的朋友！</p><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul><li>添加，修改，删除接口</li><li>添加，修改，删除友情链接</li><li>管理你的站点信息</li><li>访问日志</li><li>使用邮件接口反馈</li><li>后台登陆记录</li><li>自定义添加公告</li><li>接口调用统计 等等等…更多功能等你来探索！</li></ul><h2 id="关于授权"><a href="#关于授权" class="headerlink" title="关于授权"></a>关于授权</h2><p><del>授权价格20，不议价，可随意来找我更换域名。</del></p><p>已全部开源，不再进行任何维护行为！</p><h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><p><a href="https://github.com/renyancheng/MuXiuGeAPIAdmin">https://github.com/renyancheng/MuXiuGeAPIAdmin</a></p><h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p><a href="https://api.mwind.top/">api.mwind.top</a>(域名已到期👀)</p><h2 id="Docs"><a href="#Docs" class="headerlink" title="Docs"></a>Docs</h2><p><a href="http://doc.muxiuge.cn/">doc.muxiuge.cn</a>(域名已到期👀)</p><h2 id="用到的技术"><a href="#用到的技术" class="headerlink" title="用到的技术"></a>用到的技术</h2><ul><li>MDUI框架</li><li>JQuery.js</li><li>Vue.js</li><li>SweetAlert.js</li><li>ClipBoard.js</li><li>HighLight.js</li><li>Smooth-Scroll.polyfills.js</li><li>Chart.js</li></ul><h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><!-- + 微信：mufeng_vx --><ul><li>QQ：2441260435</li><li>邮箱：<a href="mailto:&#50;&#52;&#x34;&#x31;&#x32;&#54;&#48;&#x34;&#x33;&#53;&#x40;&#113;&#113;&#46;&#x63;&#111;&#x6d;">&#50;&#52;&#x34;&#x31;&#x32;&#54;&#48;&#x34;&#x33;&#53;&#x40;&#113;&#113;&#46;&#x63;&#111;&#x6d;</a></li></ul><h2 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h2><blockquote><p>本项目前期收费，现已开源<br>授权后，允许你进行二开，但仅供自己使用，若要公开，请务必开源。</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h1 id="沐朽阁API管理系统"><a href="#沐朽阁API管理系统" class="headerlink" title="沐朽阁API管理系统"></a>沐朽阁API管理系统</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在我没有一套完整的管理程序前，我在每次添加API时都要自己打开html文件去自己编辑才可以，而且又麻烦，就很烦，于是就有了这么一个系统。<br>这个系统从2020年9月开发一直到现在，也是经历了挺长时间了，也感谢那几个一直支持我的朋友！</p><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul><li>添加，修改，删除接口</li><li>添加，修改，删除友情链接</li><li>管理你的站点信息</li><li>访问日志</li><li>使用邮件接口反馈</li><li>后台登陆记录</li><li>自定义添加公告</li><li>接口调用统计 等等等…更多功能等你来探索！</li></ul><h2 id="关于授权"><a href="#关于授权" class="headerlink" title="关于授权"></a>关于授权</h2><p><del>授权价格20，不议价，可随意来找我更换域名。</del></p><p>已全部开源，不再进行任何维护行为！</p><h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><p><a href="https://github.com/renyancheng/MuXiuGeAPIAdmin">https://github.com/renyancheng/MuXiuGeAPIAdmin</a></p><h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p><a href="https://api.mwind.top/">api.mwind.top</a>(域名已到期👀)</p><h2 id="Docs"><a href="#Docs" class="headerlink" title="Docs"></a>Docs</h2><p><a href="http://doc.muxiuge.cn/">doc.muxiuge.cn</a>(域名已到期👀)</p><h2 id="用到的技术"><a href="#用到的技术" class="headerlink" title="用到的技术"></a>用到的技术</h2><ul><li>MDUI框架</li><li>JQuery.js</li><li>Vue.js</li><li>SweetAlert.js</li><li>ClipBoard.js</li><li>HighLight.js</li><li>Smooth-Scroll.polyfills.js</li><li>Chart.js</li></ul><h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><!-- + 微信：mufeng_vx --><ul><li>QQ：2441260435</li><li>邮箱：<a href="mailto:&#x32;&#x34;&#x34;&#x31;&#x32;&#54;&#x30;&#52;&#51;&#53;&#x40;&#113;&#113;&#x2e;&#x63;&#x6f;&#109;">&#x32;&#x34;&#x34;&#x31;&#x32;&#54;&#x30;&#52;&#51;&#53;&#x40;&#113;&#113;&#x2e;&#x63;&#x6f;&#109;</a></li></ul><h2 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h2><blockquote><p>本项目前期收费，现已开源<br>授权后，允许你进行二开，但仅供自己使用，若要公开，请务必开源。</p></blockquote>]]></content>
     
     
     <summary type="html">在我没有一套完整的管理程序前，我在每次添加API时都要自己打开html文件去自己编辑才可以，而且又麻烦，就很烦，于是就有了这么一个系统。</summary>
     
     
     
-    <category term="项目" scheme="https://renyancheng.github.io/categories/%E9%A1%B9%E7%9B%AE/"/>
+    <category term="项目" scheme="https://mxgxxx.gitee.io/categories/%E9%A1%B9%E7%9B%AE/"/>
     
     
-    <category term="API管理系统" scheme="https://renyancheng.github.io/tags/API%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    <category term="API管理系统" scheme="https://mxgxxx.gitee.io/tags/API%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="项目" scheme="https://renyancheng.github.io/tags/%E9%A1%B9%E7%9B%AE/"/>
+    <category term="项目" scheme="https://mxgxxx.gitee.io/tags/%E9%A1%B9%E7%9B%AE/"/>
     
   </entry>
   
