@@ -14,23 +14,25 @@
   
 
   
-  <title>对Java中PriorityQueue迭代器打印顺序的深度研究 | Mxgxxx&#39;s Blog</title>
+  <title>田忌赛马背后的算法 | Mxgxxx&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="前言一天我在学习JavaSE的时候，学到了PriorityQueue优先级队列这个东西，讲师说道  它这个将元素入队后会自动排序，出队的时候就会按大小排序。  然后我就试了一下，还真是，但是用迭代器打印其中的元素呢，发现事情并不简单… 问题Queue&lt;Integer&gt; queue &#x3D; new PriorityQueue&lt;&gt;(); queue.offer(10); queue.offer">
+  <meta name="description" content="前言最近看到这么一个故事，名为田忌赛马，故事是这样的：  田忌和齐王赛马，两人的马分上中下三等，如果同等级的马对应着比赛，田忌赢不了齐王。但是田忌遇到了孙膑，孙膑就教他用自己的下等马对齐王的上等马，再用自己的上等马对齐王的中等马，最后用自己的中等马对齐王的下等马，结果三局两胜，田忌赢了。  这只是三匹马对三匹马的情况，如果是一百匹呢，孙膑肯定就算不过来了，那么对于这问题，用什么算法可以解决呢？ 算">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对Java中PriorityQueue迭代器打印顺序的深度研究">
-<meta property="og:url" content="https://mxgxxx.gitee.io/2023/10/17/%E5%AF%B9Java%E4%B8%ADPriorityQueue%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%89%93%E5%8D%B0%E9%A1%BA%E5%BA%8F%E7%9A%84%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6/index.html">
+<meta property="og:title" content="田忌赛马背后的算法">
+<meta property="og:url" content="https://mxgxxx.gitee.io/2023/11/27/%E7%94%B0%E5%BF%8C%E8%B5%9B%E9%A9%AC%E8%83%8C%E5%90%8E%E7%9A%84%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="Mxgxxx&#39;s Blog">
-<meta property="og:description" content="前言一天我在学习JavaSE的时候，学到了PriorityQueue优先级队列这个东西，讲师说道  它这个将元素入队后会自动排序，出队的时候就会按大小排序。  然后我就试了一下，还真是，但是用迭代器打印其中的元素呢，发现事情并不简单… 问题Queue&lt;Integer&gt; queue &#x3D; new PriorityQueue&lt;&gt;(); queue.offer(10); queue.offer">
+<meta property="og:description" content="前言最近看到这么一个故事，名为田忌赛马，故事是这样的：  田忌和齐王赛马，两人的马分上中下三等，如果同等级的马对应着比赛，田忌赢不了齐王。但是田忌遇到了孙膑，孙膑就教他用自己的下等马对齐王的上等马，再用自己的上等马对齐王的中等马，最后用自己的中等马对齐王的下等马，结果三局两胜，田忌赢了。  这只是三匹马对三匹马的情况，如果是一百匹呢，孙膑肯定就算不过来了，那么对于这问题，用什么算法可以解决呢？ 算">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-17T09:20:41.000Z">
-<meta property="article:modified_time" content="2023-10-31T09:45:17.258Z">
+<meta property="article:published_time" content="2023-11-27T10:28:04.000Z">
+<meta property="article:modified_time" content="2023-11-27T11:29:53.240Z">
 <meta property="article:author" content="Mxgxxx">
-<meta property="article:tag" content="数据结构与算法">
+<meta property="article:tag" content="双指针">
+<meta property="article:tag" content="优先级队列">
+<meta property="article:tag" content="优势最大化">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Mxgxxx's Blog" type="application/atom+xml">
@@ -282,7 +284,7 @@ p.spoiler {
     <div id="content-body">
        
 
-<article id="post-对Java中PriorityQueue迭代器打印顺序的深度研究" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-田忌赛马背后的算法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   
     
    
@@ -295,7 +297,7 @@ p.spoiler {
   
     
       <h1 class="p-name article-title" itemprop="headline name">
-        对Java中PriorityQueue迭代器打印顺序的深度研究
+        田忌赛马背后的算法
       </h1>
     
   
@@ -303,73 +305,93 @@ p.spoiler {
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2023-10-17T09:20:41.000Z" itemprop="datePublished">2023-10-17</time>
+  <time class="dt-published" datetime="2023-11-27T10:28:04.000Z" itemprop="datePublished">2023-11-27</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/">学习分享</a>
+  <a class="meta-cate-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
    
 </div>
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            636 词 
+            1.6k 词 
           </div>
         </div>
         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/" rel="tag">优先级队列</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BC%98%E5%8A%BF%E6%9C%80%E5%A4%A7%E5%8C%96/" rel="tag">优势最大化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag">双指针</a></li></ul>
 
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>一天我在学习JavaSE的时候，学到了PriorityQueue优先级队列这个东西，讲师说道</p>
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近看到这么一个故事，名为田忌赛马，故事是这样的：</p>
 <blockquote>
-<p>它这个将元素入队后会自动排序，出队的时候就会按大小排序。</p>
+<p>田忌和齐王赛马，两人的马分上中下三等，如果同等级的马对应着比赛，田忌赢不了齐王。但是田忌遇到了孙膑，孙膑就教他用自己的下等马对齐王的上等马，再用自己的上等马对齐王的中等马，最后用自己的中等马对齐王的下等马，结果三局两胜，田忌赢了。</p>
 </blockquote>
-<p>然后我就试了一下，还真是，但是用迭代器打印其中的元素呢，发现事情并不简单…</p>
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Queue</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PriorityQueue</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-queue<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-queue<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-queue<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-queue<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>queue<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>可以猜一下，结果是什么，正常按理来说应该顺序是：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// [10, 1, 5, 2]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>但是实际的顺序是</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// [1, 2, 5, 10]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>我一直对这个很迷惑，直到我在一个学算法的网站上学到了一个叫堆的东西</p>
+<p>这只是三匹马对三匹马的情况，如果是一百匹呢，孙膑肯定就算不过来了，那么对于这问题，用什么算法可以解决呢？</p>
+<h1 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h1><p>这个算法的主要思路是：</p>
+<ul>
+<li>打得过就打，打不过就用最弱的去换对面的强马</li>
+</ul>
+<p>但是你也许会想：直接打得过就打的话，如果我的弱一点的马也打得过对面的马，那么战力是不是有点浪费了？</p>
+<p>其实这样想是多此一举了，我们假设田忌的一等马为<code>T1</code>,二等马为<code>T2</code>,齐王的一等马为<code>O1</code>,田忌的一二等马均打得过，假设我们用<code>T2</code>去打对面的<code>O1</code>，打过了，可是你仔细一想，对面最强的已经死了，我们最强的马是为了打谁而准备的呢？所以说，这种想法根本是没必要的，就好比你考试考60分就过了，你多考几分还是没什么大用。</p>
+<p>对于这种优势最大化问题，力扣上也有类似的，比如：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/advantage-shuffle/description/">【leetcode 870：优势洗牌】</a></p>
 <blockquote>
-<p>8.1 堆 <a target="_blank" rel="noopener" href="https://www.hello-algo.com/chapter_heap/heap/#813">https://www.hello-algo.com/chapter_heap&#x2F;heap&#x2F;#813</a></p>
+<p>给定两个长度相等的数组 nums1 和 nums2，nums1 相对于 nums2 的优势可以用满足 nums1[i] &gt; nums2[i] 的索引 i 的数目来描述。<br>返回 nums1 的任意排列，使其相对于 nums2 的优势最大化。</p>
 </blockquote>
-<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 10入队
+<p>题目是不允许对<code>nums2进行操作的</code>，所以我们必须利用额外的数据结构来解决这个问题，我这里就直接用了数组来存储</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">advantageCount</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums1<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// 获取数组长度</span>
+        <span class="token keyword">int</span> n <span class="token operator">=</span> nums1<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token comment">// 开一个二维数组，每个元素包括两个子元素，分别为在原始位置的下标和它的值</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> maxpq <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment">// 将nums2的全部数据放入数组中</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            maxpq<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+            maxpq<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">&#125;</span>
+        <span class="token comment">// 正序排nums1</span>
+        <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>nums1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 倒序排maxpq</span>
+        <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>maxpq<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> p1<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> p2<span class="token punctuation">)</span><span class="token operator">-></span><span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span> p2<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> p1<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 设置左右指针</span>
+        <span class="token keyword">int</span> left<span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> right <span class="token operator">=</span> n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token comment">// 设置初始下标</span>
+        <span class="token keyword">int</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token comment">// 设置生成结果用的数组</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> res <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment">// 遍历n次，生成结果</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>index <span class="token operator">&lt;</span> n<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token comment">// 获取子元素</span>
+            <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> pair <span class="token operator">=</span> maxpq<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token comment">// 获取子元素原来的下标与值</span>
+            <span class="token keyword">int</span> i <span class="token operator">=</span> pair<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> maxval <span class="token operator">=</span> pair<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            
+            <span class="token keyword">if</span><span class="token punctuation">(</span>nums1<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">></span> maxval<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+                <span class="token comment">// 用nums1较大的打赢对面的厉害的</span>
+                res<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums1<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token comment">// 右指针左移一位</span>
+                right<span class="token operator">--</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
+                <span class="token comment">// 用nums1较小的换对面厉害的</span>
+                res<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums1<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token comment">// 左指针右移</span>
+                left<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+            <span class="token comment">// 遍历用的下标+1</span>
+            index<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token comment">// 返回结果数组</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-       10
-    &#x2F;      \
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 1入队
-       10            1
-     &#x2F;    \   -&gt;   &#x2F;   \  
-    1            10<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 5入队
-       1
-    &#x2F;     \
-   10      5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 2入队
-      1               1
-    &#x2F;   \           &#x2F;   \
-   10    5    -&gt;   2     5
-  &#x2F;  \  &#x2F;  \      &#x2F;  \
- 2               10<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>最后对这个二叉小顶堆进行层序遍历得到</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// [1, 2, 5, 10]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>优先队列PriorityQueue的底层数据结构是小顶堆。</p>
-<p>每次入队时，相当于一次入堆操作。</p>
+<h1 id="一些小疑问"><a href="#一些小疑问" class="headerlink" title="一些小疑问"></a>一些小疑问</h1><p>为什么是<code>res[i]</code>?<br>答：<code>i</code>保存了其在原来时的下标，因为我们实际改的是<code>nums1</code>的顺序，那么我们就要按照<code>nums2</code>的顺序去一一对应<code>nums1</code>的顺序，这样才是去实现了换这个操作，不如位置不对应，我们就没有优势最大化了。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这套算法的时间复杂度主要是在排序上，为<code>O(nlogn)</code>。<br>至此，这类田忌赛马的题就解决了，主要是用到了双指针技巧，从最快的马开始，比得过就比，比不过就送，这样就能对任意数量的马求取一个最优的比赛策略了。</p>
 
         
       </div>
@@ -382,27 +404,22 @@ queue<span class="token punctuation">.</span><span class="token function">offer<
   
     
 <nav id="article-nav">
-  <a class="article-nav-btn left "
-    
-      href="/2023/10/31/%E5%8F%8C%E6%8C%87%E9%92%88%E6%8A%80%E5%B7%A7%E5%9C%A8%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8%E4%B9%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/"
-      title="双指针技巧在数组与链表之中的应用"
+  <a class="article-nav-btn left  disabled "
      >
     <i class="fa-solid fa-angle-left"></i>
     <p class="title-text">
-      
-        双指针技巧在数组与链表之中的应用
         
     </p>
   </a>
   <a class="article-nav-btn right "
     
-      href="/2022/02/04/%E6%B2%90%E6%9C%BD%E9%98%81API%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BF%AB%E9%80%9F%E7%AE%A1%E7%90%86%E7%9A%84API%E6%8E%A5%E5%8F%A3/"
-      title="沐朽阁API管理系统-快速管理你的API接口"
+      href="/2023/11/13/%E5%89%8D%E7%BC%80%E5%92%8C%E6%95%B0%E7%BB%84%E4%B8%8E%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E5%BA%94%E7%94%A8/"
+      title="前缀和数组与差分数组的实现与应用"
      >
 
     <p class="title-text">
       
-        沐朽阁API管理系统-快速管理你的API接口
+        前缀和数组与差分数组的实现与应用
         
     </p>
     <i class="fa-solid fa-angle-right"></i>
